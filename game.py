@@ -16,36 +16,39 @@ elif response == "no":
 else:
     print("I don't understand")
     exit()
+print("You have 5 chances")
 
 while gameOverCondition == False:
+    selection = option
     if option=="":
         selection = input("Enter a room: ")
-    if option != "":
-        selection == "k"
+    if option != "l" or option != "k" or option != "u" or option != "h":
+        option = ""
+    
     if selection=="k":
         print("\nwelcome to the kitchen. Now you have two options")
         print("\tOption 1: Select an item to look under treasure\n\t\tf = Fridge\n\t\to = oven\n\t\tm = microwave")
         print("\tOption 2: change the room by selecting room option from welcome instrucitions")
         steps += 1
+        print(steps)
         option = input("\tpick an option: ")
-       # selection = option
         if option == "f":
-            print("no")
+            print("The fridge has lots of dead animals in it now you are surrounded by snakes")
             gameOverCondition = True
         if option == "m":
-            print("burnt")
+            print("burnt!! damn thoose microwaves killed you")
             gameOverCondition = True
         if option == "o":
-            print("Try again")
-            
+            print("Try again the oven is on you can't open it")
+        
     
     if selection == "u":
         print("\nwelcome to the Utility room. Now you have two options")
         print("\tOption 1: Select an item to look under treasure\n\t\tb = Bin\n\t\tw = Washing machine\n\t\tc = Cupboard")
         print("\tOption 2: change the room by selecting room option from welcome instrucitions")
         steps += 1
+        print(steps)
         option = input("\tpick an option: ")
-        #selection = option
         if option == "b":
             print("You have snake sthat are coming out and you have benn biten")
             gameOverCondition = True
@@ -54,14 +57,16 @@ while gameOverCondition == False:
             gameOverCondition = True
         if option == "w":
             print("Try again Washing machine is running")
+        
+            
     
     if selection == "h":
         print("\nwelcome to the Hallway. Now you have two options")
         print("\tOption 1: Select an item to look under treasure\n\t\ts = storage cupboard\n\t\tsc = shoe cupboard\n\t\tstr = stairs")
         print("\tOption 2: change the room by selecting room option from welcome instrucitions")
         steps += 1
+        print(steps)
         option = input("\tpick an option: ")
-        #selection = option
         if option == "s":
             print("You got attacked by a bear hinding in the cupboard")
             gameOverCondition = True
@@ -77,8 +82,8 @@ while gameOverCondition == False:
         print("\tOption 1: Select an item to look under treasure\n\t\ts = Sofa\n\t\tt = TV\n\t\tw = Window")
         print("\tOption 2: change the room by selecting room option from welcome instrucitions")
         steps += 1
+        print(steps)
         option = input("\tpick an option: ")
-        #selection = option
         if option == "s":
             print("You found the coin which is priceless well done for the win!!!!")
             gameOverCondition = True
@@ -86,4 +91,8 @@ while gameOverCondition == False:
             print("Get out of here bye")
             gameOverCondition = True
         if option == "t":
-            print("Try again")
+            print("Try again you cannot do anything with a TV")
+            
+    if steps == 5:
+        print("You had to many chances bye")
+        gameOverCondition = True
