@@ -8,8 +8,7 @@ print(f" Welcome {name} lets get ready to go on a quest\n you find yourself next
 
 response = input(" Are you down to get rich? \n yes or no \n")
 if response == "yes" or "y" or "YES" or "Y":
-    print("\nWelcome through the front door. you can expect to see loads of spider")
-    print("There are 4 room to look for treasure, make your way to your chosen room by using following commands:\n\tk = kitchen\n\th = hallway\n\tl = living room\n\tu = utility")
+    print(f"\nWelcome through the front door. you can expect to see loads of spider There are 4 room to look for treasure, make your way to your chosen room by using following commands:\n\tk = kitchen\n\th = hallway\n\tl = living room\n\tu = utility")
 elif response == "no":
     print("Why you scared? Sorry you aint ready")
     exit()
@@ -26,9 +25,7 @@ while gameOverCondition == False:
         option = ""
     
     if selection=="k":
-        print("\nwelcome to the kitchen. Now you have two options")
-        print("\tOption 1: Select an item to look under treasure\n\t\tf = Fridge\n\t\to = oven\n\t\tm = microwave")
-        print("\tOption 2: change the room by selecting room option from welcome instrucitions")
+        print(f"\nwelcome to the kitchen {name}. Now you have two options \n\tOption 1: Select an item to look under treasure\n\t\tf = Fridge\n\t\to = oven\n\t\tm = microwave \n\tOption 2: change the room by selecting room option from welcome instrucitions")
         steps += 1
         print(steps)
         option = input("\tpick an option: ")
@@ -43,10 +40,7 @@ while gameOverCondition == False:
         
     
     if selection == "u":
-        print("\nwelcome to the Utility room. Now you have two options")
-        print("\tOption 1: Select an item to look under treasure\n\t\tb = Bin\n\t\tw = Washing machine\n\t\tc = Cupboard")
-        print("\tOption 2: change the room by selecting room option from welcome instrucitions")
-        steps += 1
+        print(f"\nwelcome to the Utility room {name}. Now you have two options \n\tOption 1: Select an item to look under treasure\n\t\tb = Bin\n\t\tw = Washing machine\n\t\tc = Cupboard \n\tOption 2: change the room by selecting room option from welcome instrucitions")
         print(steps)
         option = input("\tpick an option: ")
         if option == "b":
@@ -61,9 +55,7 @@ while gameOverCondition == False:
             
     
     if selection == "h":
-        print("\nwelcome to the Hallway. Now you have two options")
-        print("\tOption 1: Select an item to look under treasure\n\t\ts = storage cupboard\n\t\tsc = shoe cupboard\n\t\tstr = stairs")
-        print("\tOption 2: change the room by selecting room option from welcome instrucitions")
+        print(f"\nwelcome to the Hallway {name}. Now you have two options \n\tOption 1: Select an item to look under treasure\n\t\ts = storage cupboard\n\t\tsc = shoe cupboard\n\t\tstr = stairs \n\tOption 2: change the room by selecting room option from welcome instrucitions")
         steps += 1
         print(steps)
         option = input("\tpick an option: ")
@@ -78,9 +70,7 @@ while gameOverCondition == False:
             
     
     if selection == "l":
-        print("\nwelcome to the Living room. Now you have two options")
-        print("\tOption 1: Select an item to look under treasure\n\t\ts = Sofa\n\t\tt = TV\n\t\tw = Window")
-        print("\tOption 2: change the room by selecting room option from welcome instrucitions")
+        print(f"\nwelcome to the Living room {name}. Now you have two options \n\tOption 1: Select an item to look under treasure\n\t\ts = Sofa\n\t\tt = TV\n\t\tw = Window \n\tOption 2: change the room by selecting room option from welcome instrucitions")
         steps += 1
         print(steps)
         option = input("\tpick an option: ")
